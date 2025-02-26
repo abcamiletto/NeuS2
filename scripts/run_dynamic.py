@@ -8,6 +8,14 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION is strictly prohibited.
 
+from pathlib import Path 
+import sys 
+
+here = Path(__file__).resolve().parent 
+build_dir = here / 'build'
+
+sys.path.append(str(build_dir))
+
 import argparse
 import os
 import commentjson as json
